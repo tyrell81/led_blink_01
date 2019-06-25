@@ -153,11 +153,11 @@ LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BU
 all: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin
 
 flash: all
-    st-flash --reset write build/$(TARGET).bin 0x8000000
+	st-flash --reset write build/$(TARGET).bin 0x8000000
 erase:
-    st-flash --reset erase
+	st-flash --reset erase
 uart:
-    screen /dev/ttyACM0
+	screen /dev/stlinkv2_2
 
 
 #######################################
