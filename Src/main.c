@@ -59,21 +59,27 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+
+// STM32F103C8T6
+#define C8_ONBOARD_LED_ON    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+#define C8_ONBOARD_LED_OFF   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+
+
 void hello_led_blink()
 {    
     // HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
     // HAL_Delay(100);
     HAL_Delay(10);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+    C8_ONBOARD_LED_ON
     HAL_Delay(400);
     for (int i = 0; i < 5; i++)
     {
-        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);    // выкл
+        C8_ONBOARD_LED_OFF
         HAL_Delay(150);
-        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);  // вкл
+        C8_ONBOARD_LED_ON
         HAL_Delay(250);
     }
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+    C8_ONBOARD_LED_ON
     HAL_Delay(1000);
 }
 
@@ -113,9 +119,9 @@ int main(void)
     while (1)
     {
         /* USER CODE END WHILE */
-        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+        C8_ONBOARD_LED_OFF
         HAL_Delay(80);
-        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
+        C8_ONBOARD_LED_ON
         HAL_Delay(1500);
         /* USER CODE BEGIN 3 */
     }

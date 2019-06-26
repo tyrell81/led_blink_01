@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/home/vermolov/STM32Cube/Repository/STM32Cube_FW_F1_V1.7.0/Drivers/STM32F1xx_HAL_Driver/Inc/**",
-                "/home/vital/STM32Cube/Repository/STM32Cube_FW_F1_V1.7.0/Drivers/CMSIS/Device/ST/STM32F1xx/Include/"
+                "/home/vermolov/STM32Cube/Repository/STM32Cube_FW_F1_V1.7.0/Drivers/CMSIS/Device/ST/STM32F1xx/Include/**",
+                "/home/vermolov/STM32Cube/Repository/STM32Cube_FW_F1_V1.7.0/Drivers/STM32F1xx_HAL_Driver/Inc/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

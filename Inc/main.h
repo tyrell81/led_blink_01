@@ -19,6 +19,10 @@
   */
 /* USER CODE END Header */
 
+#include "stdint.h"
+#include "string.h"
+#include "stdio.h"
+
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __MAIN_H
 #define __MAIN_H

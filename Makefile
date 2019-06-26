@@ -25,7 +25,7 @@ TARGET = led_blink_01
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -Og -Wall
+OPT = -Og -Wall -std=c11
 
 
 #######################################
@@ -157,7 +157,7 @@ flash: all
 erase:
 	st-flash --reset erase
 uart:
-	screen /dev/stlinkv2_2
+	screen /dev/stlinkv2
 
 
 #######################################
